@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Hall Scheduler</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="chooser">
+        <div class="container">
+          <div class="select">
+            <select id="category-selector" onchange="updateSecondDropdown()">
+              <option value="default">Select Campus</option>
+              <option value="Amritapuri">Amritapuri</option>
+              <option value="Amaravati">Amaravati</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Kochi">Kochi</option>
+              <option value="Mysuru">Mysuru</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Nagercoil">Nagercoil</option>
+            </select>
+          </div>
+        </div>
+        <!-- Second Dropdown (Will Change Based on First Dropdown) -->
+
+        <div class="container">
+          <div class="select">
+            <select id="item-selector">
+              <option value="">Select Hall</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-links">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </div>
+    </header>
+    <script src="script.js"></script>
+    <!-- Main Content -->
+    <main>
+      <h2>Welcome to the Conference Hall Scheduler</h2>
+      <p>Schedule and manage your conference rooms efficiently.</p>
+      
+      <form class="form">
+        <p class="form-title">Log in to your account</p>
+        <div class="input-container">
+          <input type="email" placeholder="Enter email" />
+          <span> </span>
+        </div>
+        <div class="input-container">
+          <input type="password" placeholder="Enter password" />
+        </div>
+        <button type="submit" class="submit">Log in</button>
+
+        <p class="signup-link">
+          No account?
+          <a href="">Register now</a>
+        </p>
+      </form>
+
+      <form class="form">
+        <p class="form-title">Register for an account</p>
+
+        <div class="input-container">
+          <input type="text" placeholder="Enter first name* " />
+          <span> </span>
+        </div>
+
+        <div class="input-container">
+          <input type="text" placeholder="Enter last name*" />
+          <span> </span>
+        </div>
+        <div class="input-container">
+          <input type="email" placeholder="Enter email*" />
+          <span> </span>
+        </div>
+        <div class="input-container">
+          <input type="password" placeholder="Enter password*" />
+        </div>
+
+        <div class="input-container">
+          <input type="password" placeholder="Confirm password*" />
+        </div>
+        <button type="submit" class="submit">Register now</button>
+
+        <p class="signup-link">
+          Already haven an account?
+          <a href="">Log in</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
