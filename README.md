@@ -14,7 +14,7 @@ And click on the link to try out the page
 Use Linux
 
 ### Linux:
-Install nodejs and npm, also npm install -g --save-dev typescript ts-nose
+Install nodejs and npm, also npm install -g --save-dev typescript ts-node\
 install dependencies in package.json
 run npm start in root directory of project
 
