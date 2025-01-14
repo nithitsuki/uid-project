@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./static/favicon.ico" />
   </head>
   <body>
-
+    <div class="darkener" id="darkener"></div>
     <!-- Header -->
     <header>
       <div class="site-logo">
@@ -59,7 +59,10 @@
       <h2>Conference Hall Scheduler</h2>
       <p>Choose from one of our 9 campuses and book a hall with ease!</p>
       <br>
+      <div class="centered-box">
+        <br>
         <!-- Branch Selector -->
+         <h2>Choose a Campus:</h2>
         <div class="container">
           <div class="select">
             <select id="Branch-selector">
@@ -69,6 +72,8 @@
         </div>
         <!-- Hall Selector -->
         <br>
+
+        <h2>Choose a Hall:</h2>
         <div class="container">
           <div class="select">
             <select id="Hall-selector">
@@ -81,6 +86,7 @@
         <form class="form" id="login-container">
           <div style="position: relative">
             <button id="close-btn" class="close-btn">&times;</button>
+            <br>
             <p class="form-title">Log in to your account</p>
           </div>
           <div class="input-container">
@@ -100,6 +106,7 @@
         <form class="form" id="register-container">
           <div style="position: relative">
           <button id="close-btn2" class="close-btn">&times;</button>
+          <br>
           <p class="form-title">Register for an account</p>
         </div>
           <div class="input-container">
@@ -128,7 +135,9 @@
             Already haven an account?
             <a href="#" id="login-link">Log in</a>
           </p>
+          <br>
         </form>
+      </div>
       </div>
     </main>
   </body>

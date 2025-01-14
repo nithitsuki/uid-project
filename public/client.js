@@ -31,17 +31,23 @@ const FirstSelection = document.getElementById("Branch-selector");
 function toggleForm(formToShow) {
   loginContainer.style.display = "none";
   registerContainer.style.display = "none";
+  document.getElementById('darkener').style.display = 'block'; 
   formToShow.style.display = "block";
 }
 
+// Form Closers
 close_form.addEventListener("click",function() {
   loginContainer.style.display = "none";
   registerContainer.style.display = "none";
+  document.getElementById('darkener').style.display = "none"; 
 })
 close_form2.addEventListener("click",function() {
   loginContainer.style.display = "none";
   registerContainer.style.display = "none";
+  document.getElementById('darkener').style.display = "none"; 
 })
+
+
 showLoginButton.addEventListener("click", function() {
   toggleForm(loginContainer);
 });
