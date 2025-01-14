@@ -1,23 +1,101 @@
 {
-  "Amritapuri": {},
-  "Amaravati": {},
-  "Bengaluru":
-  {
-    "gmap_link": "",
-    "Halls":
-    {
-        "Amritashewari":
-        {
-            "Capacity": 100,
-            "Air Conditoning": "Yes"
-        },
-        "Krishna": {}
+  "Amritapuri": {
+    "gmap_link": "https://maps.app.goo.gl/XnqsLUyAz5R8EZUt8",
+    "Halls": {
+      "Amritapuri Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Amritapuri Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Amritapuri Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Amritapuri Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Amritapuri Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Amritapuri Hall 6": { "Capacity": 100, "AC?": "Yes" }
     }
   },
-  "Chennai": {},
-  "Coimbatore": {},
-  "Kochi": {},
-  "Mysuru": {},
-  "Faridabad": {},
-  "Nagercoil": {}
+  "Amaravati": {
+    "gmap_link": "https://maps.app.goo.gl/N8i1T41VcGmd2T3s6",
+    "Halls": {
+      "Amaravati Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Amaravati Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Amaravati Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Amaravati Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Amaravati Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Amaravati Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Bengaluru": {
+    "gmap_link": "https://www.google.com/maps/place/Bengaluru",
+    "Halls": {
+      "Amritashewari Hall": { "Capacity": 100, "AC?": "Yes" },
+      "Krishna Hall": { "Capacity": 100, "AC?": "Yes" },
+      "Rama Hall": { "Capacity": 100, "AC?": "Yes" },
+      "Bengaluru Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Bengaluru Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Bengaluru Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Chennai": {
+    "gmap_link": "https://www.google.com/maps/place/Chennai",
+    "Halls": {
+      "Chennai Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Chennai Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Chennai Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Chennai Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Chennai Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Chennai Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Coimbatore": {
+    "gmap_link": "https://www.google.com/maps/place/Coimbatore",
+    "Halls": {
+      "Coimbatore Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Coimbatore Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Coimbatore Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Coimbatore Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Coimbatore Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Coimbatore Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Kochi": {
+    "gmap_link": "https://www.google.com/maps/place/Kochi",
+    "Halls": {
+      "Kochi Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Kochi Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Kochi Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Kochi Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Kochi Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Kochi Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Mysuru": {
+    "gmap_link": "https://www.google.com/maps/place/Mysuru",
+    "Halls": {
+      "Mysuru Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Mysuru Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Mysuru Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Mysuru Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Mysuru Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Mysuru Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Faridabad": {
+    "gmap_link": "https://www.google.com/maps/place/Faridabad",
+    "Halls": {
+      "Faridabad Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Faridabad Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Faridabad Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Faridabad Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Faridabad Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Faridabad Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  },
+  "Nagercoil": {
+    "gmap_link": "https://www.google.com/maps/place/Nagercoil",
+    "Halls": {
+      "Nagercoil Hall 1": { "Capacity": 100, "AC?": "Yes" },
+      "Nagercoil Hall 2": { "Capacity": 100, "AC?": "Yes" },
+      "Nagercoil Hall 3": { "Capacity": 100, "AC?": "Yes" },
+      "Nagercoil Hall 4": { "Capacity": 100, "AC?": "Yes" },
+      "Nagercoil Hall 5": { "Capacity": 100, "AC?": "Yes" },
+      "Nagercoil Hall 6": { "Capacity": 100, "AC?": "Yes" }
+    }
+  }
 }
