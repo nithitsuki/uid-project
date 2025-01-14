@@ -23,7 +23,7 @@ interface Branches {
 }
 
 // Read and parse the JSON data from 'halls.json'
-const data: Branches = JSON.parse(fs.readFileSync('../halls.json', 'utf8'));
+const data: Branches = JSON.parse(fs.readFileSync('./halls.json', 'utf8'));
 
 const BranchNames: string[] = Object.keys(data);
 
@@ -36,14 +36,14 @@ app.get('/api/Branches/:s/list_of_halls', (req,res) => {
   const BranchName: string = req.params.s;
 
   // Check if the string index is a valid city in the map
-  const names_of_halls = Object.keys(data[BranchName]["Halls"]);
+  const names_of_halls: string[] = Object.keys(data[BranchName]["Halls"]);
 
   if (names_of_halls === undefined) {
     res.status(400).json({ error: 'Invalid city name provided' });
     return;
   }
 
-  res.json({ names_of_halls });
+  res.json(names_of_halls);
 });
 
 app.listen(port, () => {
