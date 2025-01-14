@@ -25,13 +25,20 @@ const showRegisterLink = document.getElementById("register-link");
 const loginContainer = document.getElementById("login-container");
 const registerContainer = document.getElementById("register-container");
 const close_form = document.getElementById("close-btn");
+const close_form2 = document.getElementById("close-btn2");
+const FirstSelection = document.getElementById("Branch-selector");
 
 function toggleForm(formToShow) {
   loginContainer.style.display = "none";
   registerContainer.style.display = "none";
   formToShow.style.display = "block";
 }
+
 close_form.addEventListener("click",function() {
+  loginContainer.style.display = "none";
+  registerContainer.style.display = "none";
+})
+close_form2.addEventListener("click",function() {
   loginContainer.style.display = "none";
   registerContainer.style.display = "none";
 })
@@ -47,3 +54,24 @@ showRegisterButton.addEventListener("click", function() {
 showRegisterLink.addEventListener("click", function() {
   toggleForm(registerContainer);
 });
+
+FirstSelection.addEventListener('change', function() {
+    // Log the current selected value
+    // console.log(FirstSelection.value);
+    fetch("http://localhost:3000/api/Branches/"+FirstSelection.value+"/list_of_halls")
+  .then((response) => response.json()) // Parse the JSON response
+  .then((names_of_halls) => {
+    const selectElement = document.getElementById("Hall-selector");
+    selectElement.innerHTML = "";
+    names_of_halls.forEach((name_of_hall) => {
+      const option = document.createElement("option");
+      option.value = name_of_hall; 
+      option.textContent = name_of_hall; 
+      selectElement.appendChild(option);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching branches:", error); // Handle any errors
+  });
+  
+  });

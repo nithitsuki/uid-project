@@ -62,7 +62,7 @@
         <!-- Branch Selector -->
         <div class="container">
           <div class="select">
-            <select id="Branch-selector" onchange="updateSecondDropdown()">
+            <select id="Branch-selector">
               <option value="default">Select Campus</option>
             </select>
           </div>
@@ -98,8 +98,10 @@
           </p>
         </form>
         <form class="form" id="register-container">
+          <div style="position: relative">
+          <button id="close-btn2" class="close-btn">&times;</button>
           <p class="form-title">Register for an account</p>
-
+        </div>
           <div class="input-container">
             <input type="text" placeholder="Enter first name* " />
             <span> </span>

@@ -14,12 +14,9 @@ And click on the link to try out the page
 Use Linux
 
 ### Linux:
-Install node and npm, and then:
-```bash
-$ npm install express && npm install http-server
-```
-I've not started using express yet,
-You can skip its installation if needed
+Install nodejs and npm,
+install dependencies in package.json
+run npm start in root directory of project
 
 ### Mac/FreeBSD
 Same as Linux
