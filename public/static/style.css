@@ -1,0 +1,270 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./amrita-school-biotech-alarm-2024-banner.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./amrita-school-biotech-alarm-2024-banner.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(90deg, #B10F56 2.8%, #D00846 96.83%);
+  color: white;
+  display: flex;            /* Set the container to use flexbox */
+  justify-content: space-between; /* Space items between left and right */
+  align-items: center;      /* Vertically align items */
+  padding: 10px 20px;
+}
+
+.site-logo
+{
+  display: block;
+}
+
+.chooser {
+    display: flex;
+}
+
+
+header .logo h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.auth-links a:hover,
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+}
+/* Styling for the Select Dropdown */
+select {
+  padding: 8px;
+  font-size: 1rem;
+  /* margin: 10px; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+  
+  select {
+    /* Reset Select */
+    appearance: none;
+    /* outline: 10px green; */
+    /* border: 10em; */
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 2rem;
+    color: #000000;
+    background-color: #FFD92A;
+    background-image: none;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #34495e;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
+  /* a {
+    font-weight: bold;
+    color: var(--gray);
+    text-decoration: drop-shadow;
+    padding: .25em;
+    border-radius: .50em;
+    background: pink;
+  } */
+  
+  /* 가운데정렬 - flexbox*/
+  /* 근데 이건 1행 정렬이된다. */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: absolute;
+  }
+
+/*  SIGN UP */
+/* From Uiverse.io by nathann09 */ 
+.form {
+    background-color: #fff;
+    display: none;
+    padding: 1rem;
+    max-width: 350px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+  }
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000; /* Optional: Change color on hover */
+}
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container input, .form button {
+    outline: none;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+  }
+  
+  .input-container input {
+    background-color: #fff;
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .submit {
+    display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: #4F46E5;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .signup-link {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    text-decoration: underline;
+  }
+
+  .button {
+    background-color: #876f00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #FFD92A 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin: 0.3em;
+    /* margin-right: 0px; */
+  }
+  
+  .button:hover {
+    background-color: #FFD92A;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 1.5em
+  }
+

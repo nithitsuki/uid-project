@@ -2,10 +2,7 @@
   "name": "uid-project",
   "version": "1.0.0",
   "description": "Hmmm.... Just my project for UID course i guess, I also want this to be function and used someday",
-  "keywords": [
-    "html",
-    "css"
-  ],
+  "keywords": ["html","css"],
   "homepage": "https://github.com/nithitsuki/uid-project#readme",
   "bugs": {
     "url": "https://github.com/nithitsuki/uid-project/issues"
@@ -20,9 +17,16 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ."
+    "start": "http-server ./public/"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.6"
   }
 }

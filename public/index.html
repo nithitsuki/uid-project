@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Hall Scheduler</title>
+    <link rel="stylesheet" href="./static/style.css" />
+    <link rel="shortcut icon" href="./static/favicon.ico" />
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="site-logo">
+        <img
+          src="https://webfiles.amrita.edu/2024/04/ZvmNQEuB-amrita-vishwa-vidyapeetham-university-logo-white-version.svg"
+          alt="Amrita Vishwa Vidyapeetham" height="50px"/>
+    </div>
+      <div class="auth-links">
+        <button class="button" id="login-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+            ></path>
+          </svg>
+          <div class="text">Log In</div>
+        </button>
+        <button class="button" id="register-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+            ></path>
+          </svg>
+          <div class="text">Register</div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h2>Conference Hall Scheduler</h2>
+      <p>Choose from one of our 9 campuses and book a hall with ease!</p>
+      <br>
+        <!-- Branch Selector -->
+        <div class="container">
+          <div class="select">
+            <select id="Branch-selector" onchange="updateSecondDropdown()">
+              <option value="default">Select Campus</option>
+            </select>
+          </div>
+        </div>
+        <!-- Hall Selector -->
+        <br>
+        <div class="container">
+          <div class="select">
+            <select id="Hall-selector">
+              <option value="">Select Hall</option>
+            </select>
+          </div>
+        </div>
+
+      <div style="display: grid; justify-content: center">
+        <form class="form" id="login-container">
+          <div style="position: relative">
+            <button id="close-btn" class="close-btn">&times;</button>
+            <p class="form-title">Log in to your account</p>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Enter email" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input type="password" placeholder="Enter password" />
+          </div>
+          <button type="submit" class="submit">Log in</button>
+
+          <p class="signup-link">
+            No account?
+            <a href="#" id="register-link">Register now</a>
+          </p>
+        </form>
+        <form class="form" id="register-container">
+          <p class="form-title">Register for an account</p>
+
+          <div class="input-container">
+            <input type="text" placeholder="Enter first name* " />
+            <span> </span>
+          </div>
+
+          <div class="input-container">
+            <input type="text" placeholder="Enter last name*" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Enter email*" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input type="password" placeholder="Enter password*" />
+          </div>
+
+          <div class="input-container">
+            <input type="password" placeholder="Confirm password*" />
+          </div>
+          <button type="submit" class="submit">Register now</button>
+
+          <p class="signup-link">
+            Already haven an account?
+            <a href="#" id="login-link">Log in</a>
+          </p>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="client.js"></script>
+</html>

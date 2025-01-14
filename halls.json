@@ -1,0 +1,23 @@
+{
+  "Amritapuri": {},
+  "Amaravati": {},
+  "Bengaluru":
+  {
+    "gmap_link": "",
+    "Halls":
+    {
+        "Amritashewari":
+        {
+            "Capacity": 100,
+            "Air Conditoning": "Yes"
+        },
+        "Krishna": {}
+    }
+  },
+  "Chennai": {},
+  "Coimbatore": {},
+  "Kochi": {},
+  "Mysuru": {},
+  "Faridabad": {},
+  "Nagercoil": {}
+}
