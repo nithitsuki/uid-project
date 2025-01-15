@@ -8,30 +8,30 @@
 body {
   font-family: Arial, sans-serif;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./amrita-school-biotech-alarm-2024-banner.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./amrita-school-biotech-alarm-2024-banner.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(./amrita-school-biotech-alarm-2024-banner.jpg) no-repeat center center
+      fixed;
   background-size: cover;
   color: #ffffff;
 }
 
 /* Header Styling */
 header {
-  background: linear-gradient(90deg, #B10F56 2.8%, #D00846 96.83%);
+  background: linear-gradient(90deg, #b10f56 2.8%, #d00846 96.83%);
   color: white;
-  display: flex;            /* Set the container to use flexbox */
+  display: flex; /* Set the container to use flexbox */
   justify-content: space-between; /* Space items between left and right */
-  align-items: center;      /* Vertically align items */
+  align-items: center; /* Vertically align items */
   padding: 10px 20px;
 }
 
-.site-logo
-{
+.site-logo {
   display: block;
 }
 
 .chooser {
-    display: flex;
+  display: flex;
 }
-
 
 header .logo h1 {
   font-size: 1.8rem;
@@ -90,53 +90,54 @@ label {
   font-weight: bold;
   margin-right: 10px;
 }
-  
-  select {
-    /* Reset Select */
-    appearance: none;
-    /* outline: 10px green; */
-    /* border: 10em; */
-    box-shadow: none;
-    /* Personalize */
-    flex: 1;
-    padding: 0 2rem;
-    color: #000000;
-    background-color: #FFD92A;
-    background-image: none;
-    cursor: pointer;
-    margin-left: 2rem;
-  }
-  /* Remove IE arrow */
-  select::-ms-expand {
-    display: none;
-  }
-  /* Custom Select wrapper */
-  .select {
-    position: relative;
-    display: flex;
-    width: 20em;
-    height: 3em;
-    border-radius: .25em;
-    overflow: hidden;
-  }
-  /* Arrow */
-  .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1em;
-    background-color: #34495e;
-    color: #FFD92A;
-    transition: .25s all ease;
-    pointer-events: none;
-  }
-  /* Transition */
-  .select:hover::after {
-    color: #f39c12;
-  }
-  
-  /* a {
+
+select {
+  /* Reset Select */
+  appearance: none;
+  /* outline: 10px green; */
+  /* border: 10em; */
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 2rem;
+  color: #000000;
+  background-color: #ffd92a;
+  background-image: none;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 17em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+  transform: translate(-6%, 0%);
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  color: #ffd92a;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+/* a {
     font-weight: bold;
     color: var(--gray);
     text-decoration: drop-shadow;
@@ -144,58 +145,59 @@ label {
     border-radius: .50em;
     background: pink;
   } */
-  
-  /* 가운데정렬 - flexbox*/
-  /* 근데 이건 1행 정렬이된다. */
-  .container {
-    display: flex;
-    /* position: sticky; */
 
-    justify-content: center;
-    align-items: absolute;
-  }
+/* 가운데정렬 - flexbox*/
+/* 근데 이건 1행 정렬이된다. */
+.container {
+  display: flex;
+  /* position: sticky; */
+
+  justify-content: center;
+  align-items: absolute;
+}
 
 /*  SIGN UP */
-/* From Uiverse.io by nathann09 */ 
+/* From Uiverse.io by nathann09 */
 .form {
-    /* background-color: #fff;
+  /* background-color: #fff;
     display: none;
     padding: 1rem;
     max-width: 350px;
     border-radius: 0.5rem;*/
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40em;
-    max-width: 22em;
-    min-height: 17em;
-    max-height: 32em; 
-    background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    z-index: 999;
-        /* Make sure the div is centered on the screen */
-    /* position:; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-  }
-  
-  .form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
-  }
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40em;
+  max-width: 22em;
+  min-height: 17em;
+  max-height: 32em;
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  z-index: 999;
+  /* Make sure the div is centered on the screen */
+  /* position:; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
 
 .close-btn {
   position: absolute;
-  top: auto;  
+  top: auto;
   right: 1rem;
   background: none;
   border: none;
@@ -207,118 +209,142 @@ label {
 .close-btn:hover {
   color: #ff0000; /* Optional: Change color on hover */
 }
-  
-  .input-container {
-    position: relative;
-  }
-  
-  .input-container input{
-    outline: none;
-    border: 1px solid #e5e7eb;
-    margin: 8px 0;
-  }
-  
-  .input-container input {
-    background-color: #fff;
-    padding: 1rem;
-    padding-right: 3rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    width: 300px;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  .submit {
-    display: block;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    background-color: #4F46E5;
-    color: #ffffff;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-    width: 100%;
-    border-radius: 0.5rem;
-    text-transform: uppercase;
-  }
-  
-  .signup-link {
-    color: #6B7280;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-align: center;
-  }
-  
-  .signup-link a {
-    text-decoration: underline;
-  }
 
-  .button {
-    background-color: #876f00;
-    color: #fff;
-    width: 8.5em;
-    height: 2.9em;
-    border: #FFD92A 0.2em solid;
-    border-radius: 11px;
-    text-align: right;
-    transition: all 0.6s ease;
-    margin: 0.3em;
-    /* margin-right: 0px; */
-  }
-  
-  .button:hover {
-    background-color: #FFD92A;
-    cursor: pointer;
-  }
-  
-  .button svg {
-    width: 1.6em;
-    margin: -0.2em 0.8em 1em;
-    position: absolute;
-    display: flex;
-    transition: all 0.6s ease;
-  }
-  
-  .button:hover svg {
-    transform: translateX(5px);
-  }
-  
-  .text {
-    margin: 0 1.5em
-  }
+.input-container {
+  position: relative;
+}
 
-  .centered-box {
-    min-width: 21em;
-    @media (min-width: 768px) {
-          width: 30em;
-      }
-    height: 50em; /* Adjust height as needed */
-    background-color: rgba(255, 255, 255, 0.7); /* Translucent white background */
-    border-radius: 15px; /* Rounded corners */
-    color: #000000;
-    /* Centering the div */
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    
-    /* Make sure the div is centered on the screen */
-    /* position:; */
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+.input-container input {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 15em; /* Set a specific width */
+  border-radius: 0.5rem;
+  margin: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center the text inside */
+}
+
+.signup-link {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #876f00;
+  color: #fff;
+  width: 8.5em;
+  height: 2.9em;
+  border: #ffd92a 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+  margin: 0.3em;
+  /* margin-right: 0px; */
+}
+
+.button:hover {
+  background-color: #ffd92a;
+  cursor: pointer;
+}
+
+.button svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  margin: 0 1.5em;
+}
+
+.centered-box {
+  min-width: 19.5em;
+  @media (min-width: 768px) {
+    width: 30em;
   }
-  
-  .darkener {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Darkened effect */
-    display: none; /* Hidden by default */
-    z-index: 998; /* Make sure it's below the content with z-index 999 */
+  /* min-height: 37em; */
+  /* height: 50em; */
+  /* Adjust height as needed */
+  background-color: rgba(255, 255, 255, 0.7); /* Translucent white background */
+  border-radius: 15px; /* Rounded corners */
+  color: #000000;
+  /* Centering the div */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+
+  /* Make sure the div is centered on the screen */
+  /* position:; */
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+.centered-hall-info {
+  min-width: 13em;
+  width: 13em;
+  /* min-height: 9em;  */
+  background-color: rgba(0, 0, 0, 0.405);
+  border-radius: 15px; /* Rounded corners */
+  color: #000000;
+  /* Centering the div */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+
+  /* Make sure the div is centered on the screen */
+  /* position:; */
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+.darkener {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Darkened effect */
+  display: none; /* Hidden by default */
+  z-index: 998; /* Make sure it's below the content with z-index 999 */
 }

@@ -3,7 +3,10 @@ const cors = require('cors');
 import * as fs from 'fs';
 // import path from 'path';
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allows all domains
+}));
+
 const port = 3000;
 
 interface HallInfo {

@@ -6,6 +6,13 @@
     <title>Conference Hall Scheduler</title>
     <link rel="stylesheet" href="./static/style.css" />
     <link rel="shortcut icon" href="./static/favicon.ico" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
   <body>
     <div class="darkener" id="darkener"></div>
@@ -14,8 +21,10 @@
       <div class="site-logo">
         <img
           src="https://webfiles.amrita.edu/2024/04/ZvmNQEuB-amrita-vishwa-vidyapeetham-university-logo-white-version.svg"
-          alt="Amrita Vishwa Vidyapeetham" height="50px"/>
-    </div>
+          alt="Amrita Vishwa Vidyapeetham"
+          height="50px"
+        />
+      </div>
       <div class="auth-links">
         <button class="button" id="login-btn">
           <svg
@@ -58,11 +67,11 @@
     <main>
       <h2>Conference Hall Scheduler</h2>
       <p>Choose from one of our 9 campuses and book a hall with ease!</p>
-      <br>
+      <br />
       <div class="centered-box">
-        <br>
+        <br />
         <!-- Branch Selector -->
-         <h2>Choose a Campus:</h2>
+        <h2>Choose a Campus:</h2>
         <div class="container">
           <div class="select">
             <select id="Branch-selector">
@@ -71,8 +80,7 @@
           </div>
         </div>
         <!-- Hall Selector -->
-        <br>
-
+        <br />
         <h2>Choose a Hall:</h2>
         <div class="container">
           <div class="select">
@@ -82,71 +90,81 @@
           </div>
         </div>
 
-        <br>
+        <br />
         <h2>Hall Info</h2>
-        <ol id="gmap-info">
-          <li><a href="">Click for Directions to Campus</a></li>
-        </ol>
-        <br>
-        <ol id="Hall-info">
-          <li><a href="">Click for Directions to Campus</a></li>
-        </ol>
-      <div style="display: grid; justify-content: center">
-        <form class="form" id="login-container">
-          <div style="position: relative">
-            <button id="close-btn" class="close-btn">&times;</button>
-            <br>
-            <p class="form-title">Log in to your account</p>
-          </div>
-          <div class="input-container">
-            <input type="email" placeholder="Enter email" />
-            <span> </span>
-          </div>
-          <div class="input-container">
-            <input type="password" placeholder="Enter password" />
-          </div>
-          <button type="submit" class="submit">Log in</button>
-
-          <p class="signup-link">
-            No account?
-            <a href="#" id="register-link">Register now</a>
-          </p>
-        </form>
-        <form class="form" id="register-container">
-          <div style="position: relative">
-          <button id="close-btn2" class="close-btn">&times;</button>
-          <br>
-          <p class="form-title">Register for an account</p>
+        <ol id="gmap-info"></ol>
+        <br />
+        <div class="centered-hall-info">
+          <ol id="Hall-info" style="list-style-type: none">
+            <li><a href="">Click for Directions to Campus</a></li>
+          </ol>
         </div>
-          <div class="input-container">
-            <input type="text" placeholder="Enter first name* " />
-            <span> </span>
-          </div>
+        <br />
+        <h3>Select a date:</h3>
+        <input type="text" id="datepicker" class="flatpickr" />
+        <br>
+        <h3>Select a time:</h3>
+        <input type="text" id="timepicker">
+        
+        <button type="submit" class="submit">book now</button>
 
-          <div class="input-container">
-            <input type="text" placeholder="Enter last name*" />
-            <span> </span>
-          </div>
-          <div class="input-container">
-            <input type="email" placeholder="Enter email*" />
-            <span> </span>
-          </div>
-          <div class="input-container">
-            <input type="password" placeholder="Enter password*" />
-          </div>
+        
+        <div style="display: grid; justify-content: center">
+          <form class="form" id="login-container">
+            <div style="position: relative">
+              <button id="close-btn" class="close-btn">&times;</button>
+              <br />
+              <p class="form-title">Log in to your account</p>
+            </div>
+            <div class="input-container">
+              <input type="email" placeholder="Enter email" />
+              <span> </span>
+            </div>
+            <div class="input-container">
+              <input type="password" placeholder="Enter password" />
+            </div>
+            <button type="submit" class="submit">Log in</button>
 
-          <div class="input-container">
-            <input type="password" placeholder="Confirm password*" />
-          </div>
-          <button type="submit" class="submit">Register now</button>
+            <p class="signup-link">
+              No account?
+              <a href="#" id="register-link">Register now</a>
+            </p>
+          </form>
+          <form class="form" id="register-container">
+            <div style="position: relative">
+              <button id="close-btn2" class="close-btn">&times;</button>
+              <br />
+              <p class="form-title">Register for an account</p>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Enter first name* " />
+              <span> </span>
+            </div>
 
-          <p class="signup-link">
-            Already haven an account?
-            <a href="#" id="login-link">Log in</a>
-          </p>
-          <br>
-        </form>
-      </div>
+            <div class="input-container">
+              <input type="text" placeholder="Enter last name*" />
+              <span> </span>
+            </div>
+            <div class="input-container">
+              <input type="email" placeholder="Enter email*" />
+              <span> </span>
+            </div>
+            <div class="input-container">
+              <input type="password" placeholder="Enter password*" />
+            </div>
+
+            <div class="input-container">
+              <input type="password" placeholder="Confirm password*" />
+            </div>
+            <button type="submit" class="submit">Register now</button>
+
+            <p class="signup-link">
+              Already haven an account?
+              <a href="#" id="login-link">Log in</a>
+            </p>
+            <br />
+          </form>
+        </div>
       </div>
     </main>
   </body>

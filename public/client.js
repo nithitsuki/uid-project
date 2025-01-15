@@ -71,16 +71,20 @@ function fetchGmapLink(branchId) {
 function fetchHallInfo(branchId, hallName) {
   fetch(`http://localhost:3000/api/Branches/${branchId}/${hallName}/hall_info`)
     .then((response) => response.json())
-    .then((X) => {
+    .then((hall_attributes) => {
       const list = document.getElementById("Hall-info");
       list.innerHTML = ""; // Clear previous content
       const hall_name = document.createElement("li");
       const capacity = document.createElement("li");
-      hall_name.innerHTML = `<b>Name of the HALL: </b>${hallName}`;
-      capacity.innerHTML = `<b>CAPACITY: </b>${X["Capacity"]}`;
+      const AC = document.createElement("li");
+      hall_name.innerHTML = `<b>Name of the Hall: </b><br>${hallName}`;
+      capacity.innerHTML = `<b>Seating Capacity: </b><br>${hall_attributes["Capacity"]}`;
+      AC.innerHTML = `<b>Air Conditoning: </b><br>${hall_attributes["AC?"]}`;
       list.appendChild(hall_name);
       list.appendChild(document.createElement("br"));
       list.appendChild(capacity);
+      list.appendChild(document.createElement("br"));
+      list.appendChild(AC);
     })
     .catch((error) => {
       console.error("Error fetching hall info:", error);
@@ -137,4 +141,18 @@ SecondSelectionList.addEventListener("change", function () {
 
 fetchAndPopulateBranches();
 fetchHalls('Bengaluru');
+fetchGmapLink('Bengaluru');
 fetchHallInfo('Bengaluru','Amriteswari Hall');
+
+flatpickr("#datepicker", {
+  dateFormat: "Y-m-d",
+  minDate: "today",  // Disable past dates
+});
+
+flatpickr("#timepicker", {
+  enableTime: true,            // Enable time picker
+  noCalendar: true,            // Disable date calendar
+  dateFormat: "H:i",           // Time format (24-hour)
+  time_24hr: true,             // 24-hour format
+  minuteIncrement: 15,         // Select minutes in 15-minute intervals
+});
