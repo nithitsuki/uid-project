@@ -45,7 +45,21 @@ app.get('/api/Branches/:s/list_of_halls', (req,res) => {
   }
   res.json(names_of_halls);
 });
-// LIST OF HALLS IN A BRANCH
+
+// NAME OF FIRST HALL IN A BRANCH
+app.get('/api/Branches/:s/first_hall', (req,res) => {
+  // Get the string index 's' from the URL parameter
+  const BranchName: string = req.params.s;
+  // Check if the string index is a valid city in the map
+  const names_of_halls: string = Object.keys(data[BranchName]["Halls"])[0];
+  if (names_of_halls === undefined) {
+    res.status(400).json({ error: 'Invalid city name provided' });
+    return;
+  }
+  res.json(names_of_halls);
+});
+
+// GMAP LINK OF A BRANCH
 app.get('/api/Branches/:s/gmap_link', (req,res) => {
   // Get the string index 's' from the URL parameter
   const BranchName: string = req.params.s;
