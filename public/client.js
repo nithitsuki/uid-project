@@ -61,7 +61,7 @@ function fetchGmapLink(branchId) {
       list.innerHTML = ""; // Clear previous content
       const link = document.createElement("a");
       link.href = gmap_link;
-      link.textContent = "Click for Directions to Campus";
+      link.textContent = "Click for Directions to "+branchId+" Campus";
       list.appendChild(link);
     })
     .catch((error) => {
