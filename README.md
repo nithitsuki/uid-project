@@ -1,22 +1,32 @@
 # (possibly) My Project for UID course
 
 ## What is it?
+
 A website to Book the halls in our campuses for specific dates and time, all from a single website
 
-## How to run the project?
-In the projects root directory, run:
-```bash
-npm start
-```
-And click on the link to try out the page
+### Installation & Setup
 
-### Windows:
-Use Linux
+1. **Clone the repository**:
 
-### Linux:
-Install nodejs and npm, also npm install -g --save-dev typescript ts-node\
-install dependencies in package.json
-run npm start in root directory of project
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   ```
 
-### Mac/FreeBSD
-Same as Linux
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the server**:
+
+   ```bash
+   npm run start
+   ```
+
+   The server will be available at `http://localhost:8080`.
+
+# API Documentation
+
+Checkout the [Backend Documentation!]()
