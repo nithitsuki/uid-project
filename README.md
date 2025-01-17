@@ -9,8 +9,8 @@ A website to Book the halls in our campuses for specific dates and time, all fro
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/nithitsuki/uid-project
+   cd uid-project
    ```
 
 2. **Install dependencies**:
@@ -29,4 +29,4 @@ A website to Book the halls in our campuses for specific dates and time, all fro
 
 # API Documentation
 
-Checkout the [Backend Documentation!]()
+Checkout the [Backend Documentation!](https://github.com/nithitsuki/uid-project/blob/main/backend/README.md)
