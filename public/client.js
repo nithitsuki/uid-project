@@ -14,7 +14,7 @@ const SecondSelectionList = document.getElementById("Hall-selector");
 const bookbutton = document.getElementById("book_button");
 // Function to fetch branches from the API and populate the select list
 function fetchAndPopulateBranches() {
-  fetch("http://localhost:3000/api/Branches")
+  fetch("/api/Branches")
     .then((response) => response.json()) // Parse the JSON response
     .then((branches) => {
       const selectElement = document.getElementById("Branch-selector");
@@ -38,7 +38,7 @@ function toggleForm(formToShow) {
   formToShow.style.display = "block";
 }
 function fetchHalls(branchId) {
-  fetch(`http://localhost:3000/api/Branches/${branchId}/list_of_halls`)
+  fetch(`/api/Branches/${branchId}/list_of_halls`)
     .then((response) => response.json())
     .then((names_of_halls) => {
       const selectElement = document.getElementById("Hall-selector");
@@ -55,7 +55,7 @@ function fetchHalls(branchId) {
     });
 }
 function fetchGmapLink(branchId) {
-  fetch(`http://localhost:3000/api/Branches/${branchId}/gmap_link`)
+  fetch(`/api/Branches/${branchId}/gmap_link`)
     .then((response) => response.json())
     .then((gmap_link) => {
       const list = document.getElementById("gmap-info");
@@ -70,7 +70,7 @@ function fetchGmapLink(branchId) {
     });
 }
 function fetchHallInfo(branchId, hallName) {
-  fetch(`http://localhost:3000/api/Branches/${branchId}/${hallName}/hall_info`)
+  fetch(`/api/Branches/${branchId}/${hallName}/hall_info`)
     .then((response) => response.json())
     .then((hall_attributes) => {
       const list = document.getElementById("Hall-info");
@@ -94,7 +94,7 @@ function fetchHallInfo(branchId, hallName) {
 async function fetchHallInfo_of_FirstHall(selectedBranch) {
   try {
     const response = await fetch(
-      `http://localhost:3000/api/Branches/${selectedBranch}/first_hall`
+      `/api/Branches/${selectedBranch}/first_hall`
     );
     const firstHall = await response.json(); // Get the string (first hall)
     fetchHallInfo(selectedBranch, firstHall);
@@ -176,8 +176,10 @@ flatpickr("#starttimepicker", {
   dateFormat: "H:i", // Time format (24-hour)
   time_24hr: true, // 24-hour format
   minuteIncrement: 15, // Select minutes in 15-minute intervals
-  defaultDate: new Date(),
+  defaultDate: "12:30",
+  maxTime: document.getElementById("endtimepicker").value,
 });
+
 flatpickr("#endtimepicker", {
   enableTime: true, // Enable time picker
   noCalendar: true, // Disable date calendar

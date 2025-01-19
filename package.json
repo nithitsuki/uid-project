@@ -20,7 +20,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"http-server --cors ./public/\" \"ts-node ./backend/server.ts\""
+    "old_start": "concurrently \"http-server --cors ./public/\" \"ts-node ./backend/server.ts\"",
+    "start": "ts-node ./backend/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

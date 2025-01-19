@@ -22,7 +22,7 @@ header {
   display: flex; /* Set the container to use flexbox */
   justify-content: space-between; /* Space items between left and right */
   align-items: center; /* Vertically align items */
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .site-logo {
@@ -51,6 +51,14 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
+.auth-links {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap onto a new line */
+  justify-content: flex-end; /* Align items to the right */
+  text-align: right;
+  gap: 0; /* Ensure no additional space between rows */
+}
+
 .auth-links a {
   color: white;
   text-decoration: none;
@@ -248,6 +256,7 @@ select::-ms-expand {
   margin-left: auto;
   margin-right: auto;
   text-align: center; /* Center the text inside */
+  cursor: pointer;
 }
 
 .signup-link {
@@ -271,6 +280,7 @@ select::-ms-expand {
   text-align: right;
   transition: all 0.6s ease;
   margin: 0.3em;
+  cursor: pointer; 
   /* margin-right: 0px; */
 }
 

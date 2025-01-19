@@ -1,13 +1,16 @@
 import express, { Request, Response } from 'express';
-const cors = require('cors');
+// const cors = require('cors');
+import path from 'path';
 import * as fs from 'fs';
-// import path from 'path';\
 const app = express();
-app.use(cors({
-  origin: '*', // Allows all domains
-}));
 
-const port = 3000;
+// SCREW CORS
+// app.use(cors({
+//   origin: '*',
+// }));
+
+const port = 8080;
+app.use(express.static(path.join(__dirname, '../public')));
 
 interface HallInfo {
   "Capacity": number;
