@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 const cors = require('cors');
 import * as fs from 'fs';
-// import path from 'path';
+// import path from 'path';\
 const app = express();
 app.use(cors({
   origin: '*', // Allows all domains
@@ -27,7 +27,7 @@ interface Branches {
 }
 
 // Read and parse the JSON data from 'halls.json'
-const data: Branches = JSON.parse(fs.readFileSync('./halls.json', 'utf8'));
+const data: Branches = JSON.parse(fs.readFileSync('./backend/halls.json', 'utf8'));
 
 const BranchNames: string[] = Object.keys(data);
 

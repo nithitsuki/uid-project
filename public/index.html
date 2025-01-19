@@ -80,7 +80,7 @@
           </div>
         </div>
         <!-- Hall Selector -->
-        <br />
+        <br/>
         <h2>Choose a Hall:</h2>
         <div class="container">
           <div class="select">
@@ -89,7 +89,6 @@
             </select>
           </div>
         </div>
-
         <br />
         <h2>Hall Info</h2>
         <ol id="gmap-info"></ol>
@@ -100,16 +99,23 @@
           </ol>
         </div>
         <br />
+
         <h3>Select a date:</h3>
         <input type="text" id="datepicker" class="flatpickr" />
         <br>
-        <h3>Select a time:</h3>
-        <input type="text" id="timepicker">
-        
-        <button type="submit" class="submit">book now</button>
-
-        
+        <br>
+        <h3>Select a start time:</h3>
+        <!-- <input id="time-range-picker" type="text" placeholder="Select Time Range"> -->
+        <input type="text" id="starttimepicker" placeholder="Select Start Time">
+        <br>
+        <br>
+        <h3>Select an end time:</h3>
+        <input type="text" id="endtimepicker" placeholder="Select End Time">
+        <br>
+        <button type="submit" class="submit" id="book_button">book now</button>
+        <!-- LOGIN/REGISTER FORMS -->
         <div style="display: grid; justify-content: center">
+          <!-- LOGIN FORM -->
           <form class="form" id="login-container">
             <div style="position: relative">
               <button id="close-btn" class="close-btn">&times;</button>
@@ -130,6 +136,7 @@
               <a href="#" id="register-link">Register now</a>
             </p>
           </form>
+          <!-- REGISTER FORM -->
           <form class="form" id="register-container">
             <div style="position: relative">
               <button id="close-btn2" class="close-btn">&times;</button>
@@ -162,6 +169,19 @@
               Already haven an account?
               <a href="#" id="login-link">Log in</a>
             </p>
+            <br />
+          </form>
+          <!-- TICKET POPUP -->
+          <form class="form" id="ticket-container">
+            <div style="position: relative">
+              <button id="close-btn3" class="close-btn">&times;</button>
+              <br />
+              <p class="form-title">Confirm Your Ticket!</p>
+              <ol id="Ticket-info-final" style="list-style-type: none">
+
+              </ol>
+            </div>
+            <button type="submit" class="submit">Confirm Booking</button>
             <br />
           </form>
         </div>

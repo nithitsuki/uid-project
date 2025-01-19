@@ -3,13 +3,15 @@ const showLoginButton = document.getElementById("login-btn");
 const showRegisterButton = document.getElementById("register-btn");
 const showLoginLink = document.getElementById("login-link");
 const showRegisterLink = document.getElementById("register-link");
-const loginContainer = document.getElementById("login-container");
-const registerContainer = document.getElementById("register-container");
+const login_Container = document.getElementById("login-container");
+const register_Container = document.getElementById("register-container");
+const ticket_Container = document.getElementById("ticket-container");
 const close_form = document.getElementById("close-btn");
 const close_form2 = document.getElementById("close-btn2");
+const close_form3 = document.getElementById("close-btn3");
 const FirstSelectionList = document.getElementById("Branch-selector");
 const SecondSelectionList = document.getElementById("Hall-selector");
-
+const bookbutton = document.getElementById("book_button");
 // Function to fetch branches from the API and populate the select list
 function fetchAndPopulateBranches() {
   fetch("http://localhost:3000/api/Branches")
@@ -23,15 +25,15 @@ function fetchAndPopulateBranches() {
         option.textContent = branch;
         selectElement.appendChild(option);
       });
-      selectElement.value='Bengaluru';
+      selectElement.value = "Bengaluru";
     })
     .catch((error) => {
       console.error("Error fetching branches:", error); // Handle any errors
     });
 }
 function toggleForm(formToShow) {
-  loginContainer.style.display = "none";
-  registerContainer.style.display = "none";
+  login_Container.style.display = "none";
+  register_Container.style.display = "none";
   document.getElementById("darkener").style.display = "block";
   formToShow.style.display = "block";
 }
@@ -52,7 +54,6 @@ function fetchHalls(branchId) {
       console.error("Error fetching halls:", error);
     });
 }
-
 function fetchGmapLink(branchId) {
   fetch(`http://localhost:3000/api/Branches/${branchId}/gmap_link`)
     .then((response) => response.json())
@@ -61,7 +62,7 @@ function fetchGmapLink(branchId) {
       list.innerHTML = ""; // Clear previous content
       const link = document.createElement("a");
       link.href = gmap_link;
-      link.textContent = "Click for Directions to "+branchId+" Campus";
+      link.textContent = "Click for Directions to " + branchId + " Campus";
       list.appendChild(link);
     })
     .catch((error) => {
@@ -92,38 +93,57 @@ function fetchHallInfo(branchId, hallName) {
 }
 async function fetchHallInfo_of_FirstHall(selectedBranch) {
   try {
-    const response = await fetch(`http://localhost:3000/api/Branches/${selectedBranch}/first_hall`);
+    const response = await fetch(
+      `http://localhost:3000/api/Branches/${selectedBranch}/first_hall`
+    );
     const firstHall = await response.json(); // Get the string (first hall)
-    fetchHallInfo(selectedBranch,firstHall);
+    fetchHallInfo(selectedBranch, firstHall);
   } catch (error) {
     console.error("Error fetching halls:", error);
   }
 }
 
-// EVENT LISTENERS
-close_form.addEventListener("click", function () {
-  loginContainer.style.display = "none";
-  registerContainer.style.display = "none";
-  document.getElementById("darkener").style.display = "none";
+// Event listeners to show forms when buttons or links are clicked
+[showLoginButton, showLoginLink].forEach((button) => {
+  button.addEventListener("click", () => toggleForm(login_Container));
 });
-close_form2.addEventListener("click", function () {
-  loginContainer.style.display = "none";
-  registerContainer.style.display = "none";
-  document.getElementById("darkener").style.display = "none";
+[showRegisterButton, showRegisterLink].forEach((button) => {
+  button.addEventListener("click", () => toggleForm(register_Container));
 });
-showLoginButton.addEventListener("click", function () {
-  toggleForm(loginContainer);
+[close_form, close_form2, close_form3].forEach((button) => {
+  button.addEventListener("click", function () {
+    login_Container.style.display = "none";
+    register_Container.style.display = "none";
+    document.getElementById("darkener").style.display = "none";
+  });
 });
-showLoginLink.addEventListener("click", function () {
-  toggleForm(loginContainer);
+bookbutton.addEventListener("click", function () {
+  const ticket = document.getElementById("ticket-container");
+  document.getElementById("darkener").style.display = "block";
+  ticket.style.display = "block";
+  const ticket_info = document.getElementById("Ticket-info-final");
+  ticket_info.innerHTML = ""; // Clear previous content
+  const hall_name = document.createElement("li");
+  const capacity = document.createElement("li");
+  const AC = document.createElement("li");
+  const DATE = document.createElement("li");
+  const TIME_RANGE = document.createElement("li");
+  const hallInfoList = document.getElementById("Hall-info");
+  hall_name.innerHTML = `<br><b>Name of the Hall: </b><br>${hallInfoList.children[0].textContent.replace('Name of the Hall: ', '').trim()}`;
+  capacity.innerHTML = `<b>Seating Capacity: </b> ${hallInfoList.children[2].textContent.replace('Seating Capacity: ', '').trim()}`;
+  AC.innerHTML = `<b>Air Conditoning Available?: </b> ${hallInfoList.children[4].textContent.replace('Air Conditoning: ', '').trim()}`;
+  DATE.innerHTML = `<b>Selected Date: </b>${document.getElementById("datepicker").value}`;
+  TIME_RANGE.innerHTML = `<b>Selected Time: </b>${document.getElementById("starttimepicker").value} - ${document.getElementById("endtimepicker").value}`;
+  ticket_info.appendChild(hall_name);
+  ticket_info.appendChild(document.createElement("br"));
+  ticket_info.appendChild(capacity);
+  ticket_info.appendChild(document.createElement("br"));
+  ticket_info.appendChild(AC);
+  ticket_info.appendChild(document.createElement("br"));
+  ticket_info.appendChild(DATE);
+  ticket_info.appendChild(document.createElement("br"));
+  ticket_info.appendChild(TIME_RANGE);
 });
-showRegisterButton.addEventListener("click", function () {
-  toggleForm(registerContainer);
-});
-showRegisterLink.addEventListener("click", function () {
-  toggleForm(registerContainer);
-});
-
 FirstSelectionList.addEventListener("change", function () {
   const selectedBranch = FirstSelectionList.value;
   const SecondSelector_Hall = SecondSelectionList.value;
@@ -138,21 +158,32 @@ SecondSelectionList.addEventListener("change", function () {
   fetchHallInfo(selectedBranch, selectedHall); // Fetch hall information
 });
 
-
 fetchAndPopulateBranches();
-fetchHalls('Bengaluru');
-fetchGmapLink('Bengaluru');
-fetchHallInfo('Bengaluru','Amriteswari Hall');
+fetchHalls("Bengaluru");
+fetchGmapLink("Bengaluru");
+fetchHallInfo("Bengaluru", "Amriteswari Hall");
 
 flatpickr("#datepicker", {
   dateFormat: "Y-m-d",
-  minDate: "today",  // Disable past dates
+  minDate: "today", // Disable past dates
+  defaultDate: "today",
+  // inline: true,
 });
 
-flatpickr("#timepicker", {
-  enableTime: true,            // Enable time picker
-  noCalendar: true,            // Disable date calendar
-  dateFormat: "H:i",           // Time format (24-hour)
-  time_24hr: true,             // 24-hour format
-  minuteIncrement: 15,         // Select minutes in 15-minute intervals
+flatpickr("#starttimepicker", {
+  enableTime: true, // Enable time picker
+  noCalendar: true, // Disable date calendar
+  dateFormat: "H:i", // Time format (24-hour)
+  time_24hr: true, // 24-hour format
+  minuteIncrement: 15, // Select minutes in 15-minute intervals
+  defaultDate: new Date(),
+});
+flatpickr("#endtimepicker", {
+  enableTime: true, // Enable time picker
+  noCalendar: true, // Disable date calendar
+  dateFormat: "H:i", // Time format (24-hour)
+  time_24hr: true, // 24-hour format
+  minuteIncrement: 15, // Select minutes in 15-minute intervals
+  minTime: document.getElementById("starttimepicker").value,
+  defaultDate: "16:30",
 });
